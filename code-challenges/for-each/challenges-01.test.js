@@ -8,13 +8,11 @@ Write a function named greeting that takes in a string and returns the string in
 Then, write a function named speaker that takes in a string and a callback function. The speaker function should return the string in all uppercase letters only by invoking the callback.
 ------------------------------------------------------------------------------------------------ */
 
-const greeting = (word) => {
-  // Solution code here...
-};
+const greeting = (word) => word.toUpperCase();
 
-const speaker = (message, callback) => {
+const speaker = (message, callback) => callback(message);
+    
   // Solution code here...
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -33,13 +31,17 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
-};
+    arr.push(value);
+  };
+  
+  const addNumbers = (num, arr, times, callback) => {
+    for (let i=0; i < times; i++) {
+        callback(arr,num);
+    }
+    return arr;
+  };
 
-const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-};
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -53,10 +55,17 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
+    if(num % 3 === 2) {
+        arr.pop();
+    }
   // Solution code here...
 };
 
 const removeElements = (arr, callback) => {
+    for(let i = 0; i < arr.length; i++) {
+        callback(arr[i], arr);
+    }
+    return arr;
   // Solution code here...
 };
 
@@ -67,6 +76,8 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
+    arr.forEach((num, index, arr) => {callback(num, arr)});
+        return arr;
   // Solution code here...
 };
 
