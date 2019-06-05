@@ -146,19 +146,18 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   const divide = [];
-  arr.forEach(function(num) {
-    if(num % 3 === 0) {
-      divide.push('Fizz');
-    }else if(num % 5 === 0) {
-      divide.push('Buzz');
-    }else if(num % 5 === 0 && num % 3 === 0) {
-      divide.push('Fizz Buzz');
-    }else{
-      divide.push(num);
+  arr.forEach( function(num) {
+    if( num % 5 === 0 && num % 3 === 0) {
+        divide.push('Fizz Buzz');
+    } else if(num % 5 === 0) {
+        divide.push('Buzz');
+    } else if (num % 3 === 0) {
+        divide.push('Fizz');
+    } else {
+        divide.push(num);
     }
-
-  });
-  return divide;
+});
+return divide;
   // Solution code here...
 };
 
