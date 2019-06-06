@@ -7,6 +7,10 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
+    arr.sort( (a, b) => {
+        return b-a;
+    })
+    return arr;
   // Solution code here...
 };
 
@@ -21,6 +25,8 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
+    arr.sort();
+    return arr;
   // Solution code here...
 };
 
@@ -31,10 +37,14 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
+arr.sort((a,b) =>{
+  return a.length - b.length;
+})
+return arr;
   // Solution code here...
 };
 
-/* ------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------;-------------------------------------------
 CHALLENGE 4
 
 Write a function named alphabetizeBetter that takes in an array of strings and returns the same array, with the strings sorted alphabetically. Capitalization should not change the sort order of two strings.
@@ -43,6 +53,12 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
+    arr.sort((a,b) => {
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        return a < b ? -1 : 1;
+    });
+    return arr;
   // Solution code here...
 };
 
@@ -60,6 +76,10 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
+    arr.sort((a, b) => {
+        return (a.price < b.price) ? -1 : 1;
+    })
+    return arr;
   // Solution code here...
 };
 
@@ -72,6 +92,10 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
+  arr.sort((a,b)=> {
+    return a.toString().length - b.toString().length;
+  });
+  return arr;
   // Solution code here...
 };
 
@@ -94,6 +118,10 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
+  arr.sort((a, b)=> {
+    return (a.lastName < b.lastName) ? -1 : 1;
+  })
+  return arr;
   // Solution code here...
 };
 
@@ -108,9 +136,26 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = (arr) => {
-  // Solution code here...
+  arr.sort((a, b) => {
+      if (a.lastName < b.lastName) {
+          return -1;
+      } else if (a.lastName === b.lastName || a.firstName === b.firstName) {
+          if(a.firstName === b.firstName) {
+              return a.age - b.age;
+          } else {
+              if (a.firstName < b.firstName) {
+                  return -1;
+              } else {
+                  return 1;
+              }
+          }
+      } else {
+          return 1;
+      }
+  });
+  return arr;
 };
-
+    
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
