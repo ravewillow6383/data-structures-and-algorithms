@@ -14,7 +14,6 @@ For example:
 
 const isNum = (input) => {
     return /\d/.test(input);
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,7 +58,8 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-    let halloweenMonth = 
+    return /^[Oo]ct(ober)?$/g.test(input);
+    // if(validator).test
   // Solution code here...
 };
 
