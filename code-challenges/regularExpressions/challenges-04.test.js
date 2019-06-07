@@ -27,14 +27,6 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
     return str.match(/\b[A-Z]\w*/g) || [];
-    let cityAtoJ = [];
-    let expAtoJ = /^[A-J]/;
-    arr.forEach(city => {
-        if (expAtoJ.test(city)){
-            cityAtoJ.push(city)
-        }
-    });
-    return cityAtoJ;
   };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,18 +36,18 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-    let cityAtoJ = [];
-  let expAtoJ = /^[A-J]/;
-  arr.forEach(city => {
-      if (expAtoJ.test(city)){
-          cityAtoJ.push(city)
-      }
-  });
+    let cityAtoj = [];
+    let expAtoj = /^[A-J]/;
+   arr.forEach(city => {
+       if (expAtoj.test(city)){
+        cityAtoj.push(city)
+       }
+   })
   return cityAtoJ;
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 4
+CHALLENGE
 
 You have created a game application and begin by asking users an easy question: In which month is Halloween?
 
@@ -67,6 +59,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
+    let halloweenMonth = 
   // Solution code here...
 };
 
