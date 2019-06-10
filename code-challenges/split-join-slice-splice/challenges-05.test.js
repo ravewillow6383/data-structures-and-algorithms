@@ -78,6 +78,7 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
+
   // Solution code here...
   return result;
 };
@@ -126,6 +127,11 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
+ for(let i = arr.length -1; i >= 0; i--){
+     if(arr[i] % 2 === 0){
+         arr.splice(i, 1);
+     }
+ }
   // Solution code here...
 };
 
@@ -145,7 +151,8 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+    return(numberOfCharacters < 0)?str:str.slice(0,-1 * numberOfCharacters);
+  // Solution code here.
 };
 
 
