@@ -123,7 +123,7 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  
+
   // Solution code here...
 };
 
@@ -171,6 +171,9 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
+  const extractStats = (arr) => {
+    return arr.map(element => ({'name':element.stat.name, 'total':(element.baseStat + element.effort)}));
+  };
   // Solution code here...
 };
 
