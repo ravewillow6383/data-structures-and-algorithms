@@ -59,7 +59,6 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   return arr.map(char => char.charCodeAt());
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,8 +75,7 @@ const evenOdd = (arr) => {
   return arr.map(value =>{
     return(value % 2 === 0)?'even':(value % 2 > 0)?'odd':'N/A';
   });
-  // return evenOdd;
-  // Solution code here...
+
 }
 
 /* ------------------------------------------------------------------------------------------------
