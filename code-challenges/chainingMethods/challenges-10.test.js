@@ -43,12 +43,12 @@ const totalSum = (input) => {
     //     acc + val;
     //     return acc;
     // }, 0);
-// return input.map(arr =>{
-//     return arr.reduce((acc, val)=>{
-//     acc + val;
-//     return acc;
-//     }, 0);
-// }).reduce((acc, val)=> acc + val, 0);
+return input.map(arr =>{
+    return arr.reduce((acc, val)=>{
+    acc + val;
+    return acc;
+    }, 0);
+}).reduce((acc, val)=> acc + val, 0);
 
 };
 
