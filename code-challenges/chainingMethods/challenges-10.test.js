@@ -34,22 +34,11 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-    // input.forEach(arr =>{
-    //     return arr.reduce((acc, val)=>{
-    //         acc + val;
-    //         return acc;
-    //     }, 0)
-    // }).reduce((acc, val)=>{
-    //     acc + val;
-    //     return acc;
-    // }, 0);
-return input.map(arr =>{
-    return arr.reduce((acc, val)=>{
-    acc + val;
-    return acc;
-    }, 0);
-}).reduce((acc, val)=> acc + val, 0);
-
+    return input.reduce((acc, val)=>{
+        return acc + val.reduce((innerAcc, innerVal)=>{
+            return innerAcc + innerVal;
+        }, 0)
+    }, 0)
 };
 
 /* ------------------------------------------------------------------------------------------------
