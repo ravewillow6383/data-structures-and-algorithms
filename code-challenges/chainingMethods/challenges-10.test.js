@@ -126,6 +126,10 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
+    const genderFilter = data.filter(val =>{
+        return(val.gender === 'female')?true:(val.gender === 'true')?true:false;
+    })
+    return genderFilter;
   // Solution code here...
 };
 
