@@ -9,12 +9,9 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-    const firstLetters = (arr) => {
   return arr.map(item => {
    return item.charAt(0);
   });
-};
-  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,7 +33,7 @@ const findHappiness = (arr) => {
     return results;
   };
   // Solution code here...
-};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -61,7 +58,7 @@ const standardizePhoneNumbers = (arr) => {
       });
     };
     // Solution code here...
-};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -72,7 +69,10 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  return str.split('').filter((value, idx) => {
+    if(idx % 2) return true;
+    return false;
+  }).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
