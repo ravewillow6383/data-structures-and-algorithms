@@ -106,7 +106,7 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  return(board[row][col] === '#')?'hit':'miss';
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,8 +118,16 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
-};
+    let product = numbers.map(arr => {
+      return arr.reduce((a,b) => {
+        return a * b;
+      }, 1);
+    });
+    return product.reduce((a, b) => {
+      return a * b;
+    });
+  };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
